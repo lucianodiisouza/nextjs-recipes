@@ -1,4 +1,4 @@
-import HeaderStyled from "../Header/Header.styled";
+import HeaderStyled from "../Header/styles";
 
 export default function Footer() {
   return (

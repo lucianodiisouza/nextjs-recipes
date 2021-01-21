@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import HeaderStyled from "./Header.styled";
+import HeaderStyled from "./styles";
 
 export default function Header(props) {
   return (

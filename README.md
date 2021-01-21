@@ -1,6 +1,6 @@
 ## What is this?
 
-In this web-app i will create a Recipe Static Website, with a internal form to persist recipes using `tw-dev-server` library.
+In this app i have used NextJS to create a `Recipe Static Website`, with a internal form to persist recipes using `tw-dev-server` library.
 
 ## Routes? 
 

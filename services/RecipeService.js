@@ -12,7 +12,7 @@ export const RecipeService = {
   create(newRecipe) {
     return ApiService.post(endpoint, newRecipe);
   },
-  remote(id) {
+  remove(id) {
     return ApiService.delete(`${endpoint}?id=${id}`);
   },
 };

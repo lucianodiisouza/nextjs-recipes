@@ -1,6 +1,8 @@
 import slugify from "slugify";
+import Link from "next/link";
 import RecipeCategoryStyled from "./styles";
 import RecipeCard from "../RecipeCard";
+import { capitalize } from "@material-ui/core";
 
 function createRecipeUrl(recipe) {
   const category = slugifyCategory(recipe.category);
@@ -23,7 +25,11 @@ export default function RecipeCategory({
   return (
     <div className="recipe-category">
       <style jsx>{RecipeCategoryStyled}</style>
-      <h2 className="category-name">{category}</h2>
+      <Link href={`/receitas/${slugifyCategory(category)}`}>
+        <a>
+          <h2 className="category-name">{capitalize(category)}</h2>
+        </a>
+      </Link>
       <div className="recipes">
         {recipes.map((recipe) => (
           <RecipeCard
@@ -31,7 +37,7 @@ export default function RecipeCategory({
             name={recipe.name}
             picture={recipe.img}
             category={recipe.category}
-            link={"/"}
+            link={createRecipeUrl(recipe)}
           />
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Header, Footer, RecipeCard } from "../components";
+import { Header, Footer, RecipeCategory } from "../components";
 import { RecipeService } from "../services/RecipeService";
 
 export default function Home() {
@@ -12,15 +12,7 @@ export default function Home() {
   return (
     <div>
       <Header title="NextRecipes" />
-      {list.map((recipe) => (
-        <RecipeCard
-          key={recipe.id}
-          link={"/"}
-          category={recipe.category}
-          name={recipe.name}
-          picture={recipe.img}
-        />
-      ))}
+      <RecipeCategory recipeList={list} category="doces" />
 
       <Footer />
     </div>
